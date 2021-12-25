@@ -6,6 +6,13 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is a program for solving the task from day 1 from the website AdventOfCode2021.
+ *
+ * @author Da-Br-91
+ * @version 1.0
+ */
+
 public class Day02 {
     public static List<String> movement = new ArrayList<>();
 
