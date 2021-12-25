@@ -23,7 +23,7 @@ public class Day03 {
         System.out.println("Part1: The submarine has an energy consumption of " + calculateConsumption(binaryInput) + ".");
         System.out.println();
 
-        System.out.println("Part2: The submarine has an energy consumption of " + calculateConsumption(binaryInput) + ".");
+        System.out.println("Part2: The submarine has an energy consumption of " + calculateLifeSupportRating(binaryInput) + ".");
         System.out.println();
     }
     //part1
@@ -47,10 +47,26 @@ public class Day03 {
         return gamma*epsilon;
     }
     //part2
-    private static int calculateLifeSupportRating(List<String> input){
-        return 1;
+
+    public static int oxygenGeneratorRating(List<String> input)
+    {
+
+        int rating = 1;
+        return rating;
+    }
+    public static int c02ScrubberRating(List<String>input)
+    {
+        int rating = 2;
+        return rating;
     }
 
+    public static int calculateLifeSupportRating(List<String> input)
+    {
+        int oxygenGeneratorRating = oxygenGeneratorRating(input);
+        int c02ScrubberRating = c02ScrubberRating(input);
+        return oxygenGeneratorRating*c02ScrubberRating;
+    }
+    //txt reader
     private static void getBinary() {
         try {
             binaryInput.addAll(Files.readAllLines(Path.of("src/input_txt/day03_input.txt")));
